@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenSquare</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&family=Quicksand:wght@500;700&display=swap');
+        html { scroll-behavior: smooth; max-width: 100vw; overflow-x: hidden; }
+        body, h1, h2, h3, h4, h5, h6, p, a, button, .card, .card-title, .card-text, .lead {
+            font-family: 'Quicksand', 'Montserrat', 'Roboto', 'Segoe UI', Arial, sans-serif !important;
+            letter-spacing: 0.04em; font-weight: 500; color: #eaf6fb;
+        }
+        body { background: linear-gradient(135deg, #181a1b 0%, #232526 100%); min-height: 100vh; }
+        h1, h2, h3, h4, h5, h6 { text-shadow: 0 2px 12px rgba(0, 191, 255, 0.15), 0 1px 0 #fff2; font-weight: 700; }
+        a, button { transition: all 0.2s cubic-bezier(.4, 0, .2, 1); border-radius: 8px !important; box-shadow: 0 2px 8px rgba(0, 191, 255, 0.08); }
+        a:hover, button:hover { filter: brightness(1.1) saturate(1.2); box-shadow: 0 4px 16px rgba(0, 191, 255, 0.18); transform: translateY(-2px) scale(1.03); }
+        .card { border-radius: 1.5rem !important; box-shadow: 0 8px 32px 0 rgba(0, 191, 255, 0.10), 0 1.5px 4px 0 rgba(0, 0, 0, 0.10); background: rgba(35, 37, 38, 0.95); backdrop-filter: blur(2px); border: none; margin-bottom: 1rem; }
+        .card-title { font-size: 1.25rem; font-weight: 700; letter-spacing: 0.06em; }
+        .card-text { font-size: 1.07rem; color: #c7f9ff; }
+        .lead { font-size: 1.18rem; color: #b2f7ef; font-style: italic; }
+        .adorable-section h2 { font-size: 2.1rem; margin-bottom: 1.5rem; letter-spacing: 0.09em; background: linear-gradient(90deg, #00ffe7 0%, #00bfff 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: #ffd700; font-weight: bold; letter-spacing: 1px; }
+        .card:hover { box-shadow: 0 8px 32px 0 rgba(0, 255, 231, 0.18), 0 1.5px 4px 0 rgba(0, 191, 255, 0.18); border: 1.5px solid #00ffe7; transform: translateY(-4px) scale(1.025); }
+        .btn { font-family: 'Quicksand', 'Montserrat', 'Roboto', 'Segoe UI', Arial, sans-serif !important; font-weight: 700; letter-spacing: 0.07em; box-shadow: 0 2px 12px rgba(0, 255, 231, 0.10); border: none; }
+        .btn:active { transform: scale(0.98); box-shadow: 0 1px 4px rgba(0, 191, 255, 0.10); }
+        .card-body { padding: 1.5rem 1.25rem; }
+        .adorable-section { background: linear-gradient(135deg, #232526 0%, #00ffe7 100%); color: #fff; box-shadow: 0 4px 24px rgba(0, 0, 0, 0.13); padding: 2.5rem 1rem 2rem 1rem; }
+        .adorable-section .card { background: linear-gradient(135deg, #232526 0%, #00bfff 100%); color: #fff; border: none; border-radius: 1.25rem; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10); transition: transform 0.2s; }
+        .adorable-section .card:hover { transform: translateY(-6px) scale(1.03); box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18); }
+        .adorable-section .card-title { color: #ffd700; font-weight: bold; }
+        .adorable-section .card-text { font-size: 1.05rem; }
+        .adorable-section .icon { font-size: 2.2rem; margin-bottom: 0.7rem; display: block; }
+        .service-card:hover { transform: translateY(-8px) scale(1.03); box-shadow: 0 8px 32px 0 rgba(0, 255, 255, 0.25), 0 1.5px 8px 0 rgba(0, 191, 255, 0.15); transition: transform 0.2s, box-shadow 0.2s; }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm mb-4">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#" style="letter-spacing:2px;">
+                    <span style="background: linear-gradient(90deg, #00ffe7 0%, #00bfff 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">OpenSquare</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#expertise">Expertise</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="row">
+            <div class="col-12 text-center py-5 bg-dark text-white shadow-lg">
+                <h1 class="display-4 fw-bold mb-3">
+                    Welcome to <span style="color: #00bfff; font-weight: bold; text-shadow: 0 2px 12px #00bfff, 0 1px 0 #fff; letter-spacing: 2px; font-family: 'Segoe UI', 'Arial', sans-serif; background: linear-gradient(90deg, #00ffe7 0%, #00bfff 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">OpenSquare</span>
+                </h1>
+                <p class="lead mb-2" style="font-style: italic;">
+                    Empowering Businesses with Smart Software Solutions
+                </p>
+                <p class="fs-5 mb-4">
+                    We deliver <span style="color: #ffd700;">scalable</span>, <span style="color: #7fffd4;">secure</span>,
+                    and <span style="color: #87ceeb;">innovative</span>
+                    technology tailored to your needs.<br>
+                    Let’s transform your vision into reality.
+                </p>
+                <a href="#services" class="btn btn-lg rounded-4 px-4 py-2"
+                    style="background: linear-gradient(90deg, #00ffe7 0%, #00bfff 100%); color: #222; font-weight: bold; letter-spacing: 1px; border: none;">
+                    Get Started
+                </a>
+            </div>
+        </div>
+
+        <!-- Services Section -->
+        <div class="row py-5" id="services">
+            <div class="col-12 text-center pb-4 pt-5">
+                <h2 class="fw-bold mb-4" style="letter-spacing: 1px;">
+                    <span style="background: linear-gradient(90deg, #00ffe7 0%, #00bfff 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+                        Our Services
+                    </span>
+                </h2>
+                <p class="lead mb-5" style="color: #b2f7ef; font-style: italic;">
+                    Unlock your business potential with our innovative, end-to-end solutions.
+                </p>
+            </div>
+            <div class="col-12">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 justify-content-center">
+                    <!-- Web Development -->
+                    <div class="col d-flex">
+                        <div class="card h-100 border-0 shadow-lg rounded-4 w-100 service-card"
+                            style="background: linear-gradient(135deg, #232526 0%, #00ffe7 100%); color: #fff;">
+                            <div class="card-body d-flex flex-column align-items-center py-4 px-3">
+                                <div class="mb-3" style="font-size: 3rem;">
+                                    <span style="color: #00ffe7;">&#128187;</span>
+                                </div>
+                                <h5 class="card-title fw-bold mb-2" style="letter-spacing: 1px;">Web Development</h5>
+                                <p class="card-text text-center mb-3" style="font-size: 1.08rem;">
+                                    Responsive, scalable, and modern websites & web apps for your brand.<br>
+                                    <span style="font-size: 1.3rem;">&#128640; &#128187;</span>
+                                </p>
+                                <span class="badge rounded-pill bg-info text-dark mb-2">React</span>
+                                <span class="badge rounded-pill bg-warning text-dark mb-2">Angular</span>
+                                <span class="badge rounded-pill bg-primary mb-2">Next.js</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Mobile Apps -->
+                    <div class="col d-flex">
+                        <div class="card h-100 border-0 shadow-lg rounded-4 w-100 service-card"
+                            style="background: linear-gradient(135deg, #232526 0%, #7fffd4 100%); color: #232526;">
+                            <div class="card-body d-flex flex-column align-items-center py-4 px-3">
+                                <div class="mb-3" style="font-size: 3rem;">
+                                    <span style="color: #00bfff;">&#128241;</span>
+                                </div>
+                                <h5 class="card-title fw-bold mb-2" style="letter-spacing: 1px;">Mobile App Development</h5>
+                                <p class="card-text text-center mb-3" style="font-size: 1.08rem;">
+                                    Custom iOS & Android apps to engage your customers everywhere.<br>
+                                    <span style="font-size: 1.3rem;">&#128241; &#128172;</span>
+                                </p>
+                                <span class="badge rounded-pill bg-success mb-2">Flutter</span>
+                                <span class="badge rounded-pill bg-info text-dark mb-2">React Native</span>
+                                <span class="badge rounded-pill bg-dark mb-2">Swift</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Data Analytics -->
+                    <div class="col d-flex">
+                        <div class="card h-100 border-0 shadow-lg rounded-4 w-100 service-card"
+                            style="background: linear-gradient(135deg, #232526 0%, #ffa07a 100%); color: #fff;">
+                            <div class="card-body d-flex flex-column align-items-center py-4 px-3">
+                                <div class="mb-3" style="font-size: 3rem;">
+                                    <span style="color: #ffa07a;">&#128202;</span>
+                                </div>
+                                <h5 class="card-title fw-bold mb-2" style="letter-spacing: 1px;">Data Analytics & AI</h5>
+                                <p class="card-text text-center mb-3" style="font-size: 1.08rem;">
+                                    Transform data into actionable insights with analytics & AI.<br>
+                                    <span style="font-size: 1.3rem;">&#129504; &#128187;</span>
+                                </p>
+                                <span class="badge rounded-pill bg-warning text-dark mb-2">Python</span>
+                                <span class="badge rounded-pill bg-info text-dark mb-2">Power BI</span>
+                                <span class="badge rounded-pill bg-primary mb-2">Machine Learning</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Cloud & DevOps -->
+                    <div class="col d-flex">
+                        <div class="card h-100 border-0 shadow-lg rounded-4 w-100 service-card"
+                            style="background: linear-gradient(135deg, #232526 0%, #ffd700 100%); color: #fff;">
+                            <div class="card-body d-flex flex-column align-items-center py-4 px-3">
+                                <div class="mb-3" style="font-size: 3rem;">
+                                    <span style="color: #ffd700;">&#9729;&#65039;</span>
+                                </div>
+                                <h5 class="card-title fw-bold mb-2" style="letter-spacing: 1px;">Cloud & DevOps</h5>
+                                <p class="card-text text-center mb-3" style="font-size: 1.08rem;">
+                                    Secure, scalable cloud solutions & automation for your business.<br>
+                                    <span style="font-size: 1.3rem;">&#9889; &#128187;</span>
+                                </p>
+                                <span class="badge rounded-pill bg-primary mb-2">AWS</span>
+                                <span class="badge rounded-pill bg-info text-dark mb-2">Azure</span>
+                                <span class="badge rounded-pill bg-dark mb-2">Docker</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Expertise Section -->
+        <div class="row py-5" id="expertise">
+            <div class="col-12 text-center pb-4 pt-5">
+                <h2 class="fw-bold mb-4" style="letter-spacing: 1px;">
+                    <span style="background: linear-gradient(90deg, #ffd700 0%, #00bfff 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+                        Sector Expertise
+                    </span>
+                </h2>
+                <p class="lead mb-5" style="color: #b2f7ef; font-style: italic;">
+                    Proven experience delivering solutions across diverse industries.
+                </p>
+            </div>
+            <div class="col-12">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 justify-content-center">
+                    <!-- Retail & E-commerce -->
+                    <div class="col d-flex">
+                        <div class="card h-100 border-0 shadow-lg rounded-4 w-100"
+                            style="background: linear-gradient(135deg, #232526 0%, #00ffe7 100%); color: #fff;">
+                            <div class="card-body d-flex flex-column align-items-center py-4 px-3">
+                                <div class="mb-3" style="font-size: 2.8rem;">
+                                    <span class="icon" style="color: #00ffe7;">&#128722;</span>
+                                </div>
+                                <h5 class="card-title fw-bold mb-2" style="letter-spacing: 1px;">Retail & E-commerce</h5>
+                                <p class="card-text text-center mb-0" style="font-size: 1.08rem;">
+                                    Omnichannel platforms, inventory management, and seamless online shopping experiences.<br>
+                                    <span style="font-size: 1.3rem;">&#128179; &#128722;</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Healthcare & Life Sciences -->
+                    <div class="col d-flex">
+                        <div class="card h-100 border-0 shadow-lg rounded-4 w-100"
+                            style="background: linear-gradient(135deg, #232526 0%, #00bfff 100%); color: #fff;">
+                            <div class="card-body d-flex flex-column align-items-center py-4 px-3">
+                                <div class="mb-3" style="font-size: 2.8rem;">
+                                    <span class="icon" style="color: #00bfff;">&#128137;</span>
+                                </div>
+                                <h5 class="card-title fw-bold mb-2" style="letter-spacing: 1px;">Healthcare & Life Sciences</h5>
+                                <p class="card-text text-center mb-0" style="font-size: 1.08rem;">
+                                    Secure patient portals, telemedicine, and data-driven healthcare solutions.<br>
+                                    <span style="font-size: 1.3rem;">&#128137; &#128657;</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Finance & Fintech -->
+                    <div class="col d-flex">
+                        <div class="card h-100 border-0 shadow-lg rounded-4 w-100"
+                            style="background: linear-gradient(135deg, #232526 0%, #ffd700 100%); color: #fff;">
+                            <div class="card-body d-flex flex-column align-items-center py-4 px-3">
+                                <div class="mb-3" style="font-size: 2.8rem;">
+                                    <span class="icon" style="color: #ffd700;">&#128181;</span>
+                                </div>
+                                <h5 class="card-title fw-bold mb-2" style="letter-spacing: 1px;">Finance & Fintech</h5>
+                                <p class="card-text text-center mb-0" style="font-size: 1.08rem;"></p>
+                                    Digital banking, payment gateways, and regulatory-compliant fintech platforms.<br>
+                                    <span style="font-size: 1.3rem;">&#128181; &#128176;</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Education & E-learning -->
+                    <div class="col d-flex">
+                        <div class="card h-100 border-0 shadow-lg rounded-4 w-100"
+                            style="background: linear-gradient(135deg, #232526 0%, #ffa07a 100%); color: #fff;">
+                            <div class="card-body d-flex flex-column align-items-center py-4 px-3">
+                                <div class="mb-3" style="font-size: 2.8rem;">
+                                    <span class="icon" style="color: #ffa07a;">&#127891;</span>
+                                </div>
+                                <h5 class="card-title fw-bold mb-2" style="letter-spacing: 1px;">Education & E-learning</h5>
+                                <p class="card-text text-center mb-0" style="font-size: 1.08rem;">
+                                    Interactive learning platforms, LMS, and virtual classrooms for modern education.<br>
+                                    <span style="font-size: 1.3rem;">&#127891; &#128218;</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <div class="row py-5" id="about">
+            <div class="col-12 text-center pb-4 pt-5">
+                <h2 class="fw-bold mb-4" style="letter-spacing: 1px;">
+                    <span style="background: linear-gradient(90deg, #00ffe7 0%, #00bfff 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+                        Why Choose OpenSquare?
+                    </span>
+                </h2>
+                <p class="lead mb-5" style="color: #b2f7ef; font-style: italic;">
+                    Partner with a team that’s passionate about your growth. We blend creativity, technology, and business insight to deliver real results.
+                </p>
+            </div>
+            <div class="col-12">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 justify-content-center">
+                    <div class="col d-flex">
+                        <div class="card h-100 border-0 shadow-lg rounded-4 w-100"
+                            style="background: linear-gradient(135deg, #232526 0%, #00ffe7 100%); color: #fff;">
+                            <div class="card-body d-flex flex-column align-items-center py-4 px-3">
+                                <div class="mb-3" style="font-size: 2.8rem;">
+                                    <span class="icon" style="color: #00ffe7;">&#128161;</span>
+                                </div>
+                                <h5 class="card-title fw-bold mb-2" style="letter-spacing: 1px;">Innovative Solutions</h5>
+                                <p class="card-text text-center mb-0" style="font-size: 1.08rem;">
+                                    We don’t just build software—we craft unique digital experiences that help your business stand out and grow faster.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-flex">
+                        <div class="card h-100 border-0 shadow-lg rounded-4 w-100"
+                            style="background: linear-gradient(135deg, #232526 0%, #00bfff 100%); color: #fff;">
+                            <div class="card-body d-flex flex-column align-items-center py-4 px-3">
+                                <div class="mb-3" style="font-size: 2.8rem;">
+                                    <span class="icon" style="color: #00bfff;">&#128176;</span>
+                                </div>
+                                <h5 class="card-title fw-bold mb-2" style="letter-spacing: 1px;">Business-Focused Results</h5>
+                                <p class="card-text text-center mb-0" style="font-size: 1.08rem;">
+                                    Your goals drive our process. We deliver measurable ROI and solutions that solve real business challenges.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-flex">
+                        <div class="card h-100 border-0 shadow-lg rounded-4 w-100"
+                            style="background: linear-gradient(135deg, #232526 0%, #ffd700 100%); color: #fff;">
+                            <div class="card-body d-flex flex-column align-items-center py-4 px-3">
+                                <div class="mb-3" style="font-size: 2.8rem;">
+                                    <span class="icon" style="color: #ffd700;">&#128640;</span>
+                                </div>
+                                <h5 class="card-title fw-bold mb-2" style="letter-spacing: 1px;">End-to-End Partnership</h5>
+                                <p class="card-text text-center mb-0" style="font-size: 1.08rem;">
+                                    From idea to launch and beyond, we’re with you every step—offering support, strategy, and technical expertise.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-flex">
+                        <div class="card h-100 border-0 shadow-lg rounded-4 w-100"
+                            style="background: linear-gradient(135deg, #232526 0%, #ffa07a 100%); color: #fff;">
+                            <div class="card-body d-flex flex-column align-items-center py-4 px-3">
+                                <div class="mb-3" style="font-size: 2.8rem;">
+                                    <span class="icon" style="color: #ffa07a;">&#128079;</span>
+                                </div>
+                                <h5 class="card-title fw-bold mb-2" style="letter-spacing: 1px;">Trusted by Clients Worldwide</h5>
+                                <p class="card-text text-center mb-0" style="font-size: 1.08rem;">
+                                    Businesses across industries trust OpenSquare for reliability, transparency, and results that exceed expectations.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-5">
+                    <a href="#contact" class="btn btn-lg rounded-pill px-5 shadow"
+                        style="background: linear-gradient(90deg, #00ffe7 0%, #00bfff 100%); color: #222; font-weight: bold; letter-spacing: 1px; border: none;">
+                        Let’s Build Your Success Story
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="row py-5" id="contact">
+            <div class="col-12 text-center pb-4 pt-5">
+                <h2 class="fw-bold mb-4" style="letter-spacing: 1px;">
+                    <span style="background: linear-gradient(90deg, #00ffe7 0%, #00bfff 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+                        Want Your Own Website? <span style="font-size:1.5rem;">&#128640;</span>
+                    </span>
+                </h2>
+                <p class="lead mb-5" style="color: #b2f7ef; font-style: italic;">
+                    Dreaming of your own website? Fill out the form below and let’s build something amazing together!
+                    <span style="font-size:1.5rem;">&#128187;&#128171;</span>
+                </p>
+            </div>
+            <div class="col-12 col-md-8 offset-md-2">
+                <div class="card border-0 shadow-lg rounded-5"
+                    style="background: linear-gradient(120deg, #e0ffff 0%, #f0f8ff 100%);">
+                    <div class="card-body p-5">
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold" style="color:#00bfff;">
+                                        <span style="font-size:1.2rem;">&#128100;</span> Your Name
+                                    </label>
+                                    <input type="text" class="form-control rounded-pill px-4 py-2" name="name"
+                                        placeholder="e.g. Alex Smith" required
+                                        style="background:rgba(255,255,255,0.8); color:#222; border:1px solid #00bfff;">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold" style="color:#00ffe7;">
+                                        <span style="font-size:1.2rem;">&#128231;</span> Email
+                                    </label>
+                                    <input type="email" class="form-control rounded-pill px-4 py-2" name="email"
+                                        placeholder="you@email.com" required
+                                        style="background:rgba(255,255,255,0.8); color:#222; border:1px solid #00ffe7;">
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <label class="form-label fw-semibold" style="color:#00bfff;">
+                                    <span style="font-size:1.2rem;">&#128172;</span> What kind of website do you want?
+                                </label>
+                                <textarea class="form-control rounded-4 px-4 py-2" rows="4" name="message"
+                                    placeholder="Tell me about your dream website..." required
+                                    style="background:rgba(255,255,255,0.8); color:#222; border:1px solid #b2f7ef;"></textarea>
+                            </div>
+                            <div class="d-flex justify-content-center mt-4">
+                                <button type="submit" class="btn btn-lg rounded-pill px-5 shadow"
+                                    style="background: linear-gradient(90deg, #00ffe7 0%, #00bfff 100%); color: #222; font-weight: bold; letter-spacing: 1px; border: none;">
+                                    <span style="font-size:1.3rem;">&#128640;</span> Contact Me
+                                </button>
+                            </div>
+                            <div class="text-center mt-3" style="color:#00bfff;">
+                                I can’t wait to help you launch your website! <span style="font-size:1.2rem;">&#127881;</span>
+                            </div>
+                        </form>
+                        <script>
+                        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+                            e.preventDefault();
+                            const form = e.target;
+                            const data = {
+                                name: form.name.value,
+                                email: form.email.value,
+                                message: form.message.value
+                            };
+                            try {
+                                await fetch('http://12.23.34.45:8989/api/get', {
+                                    method: 'POST',
+                                    headers: { 'Content-Type': 'application/json' },
+                                    body: JSON.stringify(data)
+                                });
+                                alert('Thank you! Your message has been sent.');
+                                form.reset();
+                            } catch (err) {
+                                alert('Sorry, there was an error sending your message.');
+                            }
+                        });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="row py-4 bg-dark text-white mt-0">
+            <div class="col-12 text-center">
+                <div class="mb-2">
+                    <a href="https://www.linkedin.com/" target="_blank" class="text-info mx-2" style="font-size:1.5rem;"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://github.com/" target="_blank" class="text-light mx-2" style="font-size:1.5rem;"><i class="bi bi-github"></i></a>
+                    <a href="mailto:info@opensquare.com" class="text-warning mx-2" style="font-size:1.5rem;"><i class="bi bi-envelope-fill"></i></a>
+                </div>
+                <small>&copy;2024 OpenSquare. All rights reserved.</small>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
